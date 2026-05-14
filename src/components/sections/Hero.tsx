@@ -1,8 +1,6 @@
 import logo from "../../assets/logo.png";
-export function Hero() {
-  const headline = "COMBEAR";
-  const sub = "PUB";
 
+export function Hero() {
   return (
     <section
       style={{
@@ -17,7 +15,6 @@ export function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Tag line */}
       <p
         style={{
           fontFamily: "'DM Sans', sans-serif",
@@ -32,7 +29,6 @@ export function Hero() {
         Bogotá D.C · Cervecería Artesanal
       </p>
 
-      {/* Main headline */}
       <h1
         style={{
           fontFamily: "'Bebas Neue', sans-serif",
@@ -40,15 +36,9 @@ export function Hero() {
           margin: 0,
         }}
       >
-        <img
-          style={{
-            height: "200px",
-          }}
-          src={logo}
-        />
+        <img style={{ height: "200px" }} src={logo} alt="Combear logo" />
       </h1>
 
-      {/* Descriptor */}
       <p
         style={{
           fontFamily: "'Playfair Display', serif",
@@ -65,7 +55,6 @@ export function Hero() {
         Siempre con la mejor energía.
       </p>
 
-      {/* CTA */}
       <a
         href="#eventos"
         style={{
@@ -82,20 +71,21 @@ export function Hero() {
           transition: "background 0.3s, color 0.3s",
         }}
         onMouseEnter={(e) => {
-          e.target.style.background = "transparent";
-          e.target.style.color = "#fff";
-          e.target.style.outline = "1px solid #fff";
+          const el = e.currentTarget as HTMLAnchorElement;
+          el.style.background = "transparent";
+          el.style.color = "#fff";
+          el.style.outline = "1px solid #fff";
         }}
         onMouseLeave={(e) => {
-          e.target.style.background = "#fff";
-          e.target.style.color = "#000";
-          e.target.style.outline = "none";
+          const el = e.currentTarget as HTMLAnchorElement;
+          el.style.background = "#fff";
+          el.style.color = "#000";
+          el.style.outline = "none";
         }}
       >
         Ver Próximos Eventos
       </a>
 
-      {/* Bottom address */}
       <div
         style={{
           position: "absolute",
@@ -129,7 +119,6 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Scroll indicator */}
       <div
         style={{
           position: "absolute",
